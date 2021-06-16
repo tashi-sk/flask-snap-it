@@ -6,6 +6,7 @@
 /* Flash messages */
 .flashes {
     line-height: 2;
+    background-color: rgb(114, 144, 58);
 }
 
 /*  Register/Login Page  */
