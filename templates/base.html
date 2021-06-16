@@ -16,7 +16,35 @@
     <title>Snap-It</title>
 </head>
 <body>
-    <h2>Base Template</h2>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-1" href="">Snap-It</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="">Log Out</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="">Register</a>
+                </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
     <main class="container">
         {% block content %}
         {% endblock %}
