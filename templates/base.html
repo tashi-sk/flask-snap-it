@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
             <div class="container-fluid">
-              <a class="navbar-brand fs-1" href="">Snap-It</a>
+              <a class="navbar-brand fs-1" href="{{ url_for('home') }}">Snap-It</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -38,7 +38,7 @@
                     <a class="nav-link text-light" href="">Log In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="">Register</a>
+                    <a class="nav-link text-light" href="{{ url_for('register') }}">Register</a>
                 </li>
                 </ul>
               </div>
