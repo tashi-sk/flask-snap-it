@@ -16,6 +16,10 @@
     color: rgb(114, 144, 58);
 }
 
+.btn-login:hover {
+    color: rgb(114, 144, 58);
+}
+
 .btn-register:hover {
     color: rgb(114, 144, 58);
 }

@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-    <h4 class="text-center mt-3 fs-1 text-color">Register</h4>
+    <h4 class="text-center mt-3 fs-1 text-color">Log In</h4>
     <div class="p-5">
         <div class="row card-body">
-            <form class="col-12 shadow p-5" method="POST" action="{{ url_for('register') }}">
+            <form class="col-12 shadow p-5" method="POST" action="{{ url_for('login') }}">
                 <div class="">
                     <!-- username -->
                     <div class="mb-3 row">
-                        <label for="username" class="col-sm-1 offset-sm-3 col-form-label"><i class="fas fa-user-plus text-light fs-1"></i></label>
+                        <label for="username" class="col-sm-1 offset-sm-3 col-form-label"><i class="fas fa-user text-light fs-1"></i></label>
                         <div class="col-sm-4 ">
                             <input id="username" name="username" type="text" placeholder="Username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
                         </div>
@@ -19,11 +19,11 @@
                             <input id="password" name="password" type="password" placeholder="Password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
                         </div>
                     </div>
-                    <!-- register -->
-                    <div class="row ">
+                    <!-- Log in -->
+                    <div class="row">
                         <div class="col text-center">
-                            <button type="submit" class="btn btn-lg btn-outline-light btn-register">
-                                Register <i class="fas fa-sign-in-alt"></i>
+                            <button type="submit" class="btn btn-lg btn-outline-light btn-login">
+                                Log in <i class="fas fa-sign-in-alt"></i>
                             </button>
                         </div>
                     </div>
@@ -32,11 +32,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-11">
-            <p class="text-center text-color fw-bold">
-                Already Registered?
-                <a href="{{ url_for('login') }}" class="fw-normal p-2">Log In</a>
-            </p>
-        </div>
+    <div class="col-11">
+        <p class="text-center text-color fw-bold">
+            Not Registered?
+            <a href="{{ url_for('register') }}" class="fw-normal p-2">Register</a>
+        </p>
+    </div>
     </div>
 {% endblock %}
