@@ -87,6 +87,15 @@ def profile(username):
             "profile.html", username=username)
     return redirect(url_for('login'))
 
+
+@app.route("/logout")
+def logout():
+    # deleting user from session cookie
+    session.pop("user")
+    flash("You have been Logged out successfully")
+    return redirect(url_for("login"))
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
