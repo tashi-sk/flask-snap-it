@@ -9,7 +9,7 @@
     background-color: rgb(114, 144, 58);
 }
 
-/*  Register/Login Page  */
+/*  Register/Login template  */
 .card-body {
     background-color: rgb(114, 144, 58);
 }
@@ -22,5 +22,16 @@
 }
 
 .btn-register:hover {
+    color: rgb(114, 144, 58);
+}
+
+/* Profile template */
+
+.profile-header {
+    margin-top: 1.5em;
+    padding: 1em;
+}
+
+.upload-btn:hover {
     color: rgb(114, 144, 58);
 }
