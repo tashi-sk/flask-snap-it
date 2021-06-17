@@ -259,6 +259,27 @@ def edit_comment(comment_id):
     return render_template("edit_comment.html",post=post, post_comments=post_comments)
 
 
+@app.route("/delete_comment/<comment_id>")
+def delete_comment(comment_id):
+    # find comments in db with comment_id
+    post_comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
+    # get all articles post from db
+    articles = mongo.db.article.find()
+    # getting comment_id from comments db to give as post_id on comments.html
+    for k,v in post_comments.items():
+        if k == "comment_id":
+            post_id = v
+
+    # get the article post from db where user was deleteing comment
+    post = mongo.db.article.find_one({"_id": ObjectId(post_id)})
+    # sorting comments for post by date 
+    comments = mongo.db.comments.find().sort("date", -1)
+    # removing user selected comment 
+    mongo.db.comments.remove({"_id": ObjectId(comment_id)})
+    flash("Comment Successfully deleted")
+    return render_template("comments.html", articles=articles, post=post, comments=comments)
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
