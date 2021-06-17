@@ -6,8 +6,8 @@
                     <input class="form-control border" type="text" id="userEditComment" name="userEditComment"
                         value="{{ post_comments.comment }}" minlength="3" maxlength="250" required>
                     <div class="my-3">
-                        <a href="{{ url_for( 'comments', post_id=post._id ) }}" class="btn btn-danger">Cancel</a>
                         <button class="btn btn-success" type="submit">Update</button>
+                        <a href="{{ url_for( 'comments', post_id=post._id ) }}" class="btn btn-danger">Cancel</a>
                     </div>
                 </div>
             </div>
