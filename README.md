@@ -19,8 +19,8 @@ Note: This project is built for educational purpose. please dont share your pers
     * [User Stories](#User-Stories)
     * [Color Scheme](#Color-Scheme)
     * [Typography](#Typography)
-* [Website Structure](#)
-    * [Wireframes](#)
+* [Website Structure](#Website-Structure)
+    * [Wireframes](#Wireframes)
     * [Mockups](#)
     * [Database Structure](#)
 * [Features](#features)
@@ -79,3 +79,16 @@ Note: This project is built for educational purpose. please dont share your pers
 
 ### Typography
    * for Typography i have used Roboto font family style which i have found on [Google Fonts](https://fonts.google.com).
+
+## Website Structure
+
+### WireFrames
+   
+   * [Home Page](wireframes/home_page.png)
+   * [Register Page](wireframes/register_page.png)
+   * [Log in Page](wireframes/Login_page.png)
+   * [Community Page](wireframes/community_page.png)
+   * [Comments Page](wireframes/comment_page.png)
+   * [Upload/Edit](wireframes/comment_page.png)
+
+
