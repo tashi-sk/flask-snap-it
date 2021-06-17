@@ -72,4 +72,4 @@ Note: This project is built for educational purpose. please dont share your pers
     * I have used very basic color scheme for this project. As my purpose was to keep website simple and straight.
     * i have used the folowing colors in this project.
 
-<img src="color-pallete/color-pallete.png" alt="Color-Pallete>
+<img src="https://github.com/tashi-sk/flask-snap-it/blob/master/color-pallete/bootstrap-color.png" alt="Color-Pallete>
