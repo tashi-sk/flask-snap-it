@@ -191,9 +191,36 @@ def delete_post(post_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
-@app.route("/comments", methods=["GET", "POST"])
-def comments():
-    return render_template('comments.html')
+@app.route("/comments/<post_id>", methods=["GET", "POST"])
+def comments(post_id):
+    post = mongo.db.article.find_one({"_id": ObjectId(post_id)})
+    articles = mongo.db.article.find()
+    comments = mongo.db.comments.find().sort("date", -1)
+    if request.method == "POST":
+        # current date and time
+        now_date = datetime.now().strftime('%d-%b')
+        now_time = datetime.now()
+        current_time = str(now_time.hour)+":"+str(now_time.minute)
+        if now_time.hour > 12:
+            current_time = str(now_time.strftime('%H:%M'))+"pm"
+        else:
+            current_time = str(now_time.strftime('%H:%M'))+"am"
+        # insert new comment in db
+        new_comment = {
+                "comment_id": ObjectId(post_id),
+                "comment": request.form.get("userComment"),
+                "submit_by": session["user"].lower(),
+                "date": now_date,
+                "time": current_time,
+            }
+
+        mongo.db.comments.insert_one(new_comment)
+        flash("Comment Added")
+        return render_template(
+            'comments.html', articles=articles, post=post, comments=comments)
+
+    return render_template(
+        'comments.html', articles=articles, post=post, comments=comments)
 
 
 if __name__ == "__main__":

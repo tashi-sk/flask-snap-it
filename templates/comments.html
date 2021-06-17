@@ -1,29 +1,43 @@
 {% extends "base.html" %} {% block content %}
-<form action="{{ url_for('comments') }}" method="post">
-    <div class="row mt-3 profile-header">
-        <div class="col-sm text-center">
-            <img class="" src="" alt="article-image" class="shadow">
-            <h4 class="p-2"> post.title </h5>
-                <div class="row mt-3">
-                    <div class="col-sm-7 mx-auto text-justify">
-                        <p class=" p-2"> post.summary </p>
-                        <p class="badge rounded-pill bg-warning text-dark">Submit by: <span
-                                class="text-success"> post.submit_by</span></p>
+    {% for article in articles %}
+        {% if article.title == post.title %}
+            <form action="{{ url_for('comments', post_id=article._id) }}" method="post">
+                <div class="row mt-3 profile-header">
+                    <div class="col-sm text-center">
+                        <img class="img-fluid" src="{{ article.image }}" alt="article-image" class="shadow">
+                        <h4 class="p-2">{{ post.title }}</h5>
+                            <div class="row mt-3">
+                                <div class="col-sm-7 mx-auto text-justify">
+                                    <p class=" p-2">{{ post.summary }}</p>
+                                    <p class="badge rounded-pill bg-warning text-dark">Submit by: <span
+                                            class="text-success">{{ post.submit_by.capitalize() }}</span></p>
+                                </div>
+                            </div>
                     </div>
                 </div>
-        </div>
-    </div>
-    <div class="row container">
-        <div class="col-12 mb-3">
-            <label for="userComment" class="text-success fs-5">Your Comment .....</label>
-            <div class="float-end mb-2">
-                <button href="" class="btn bg-color text-light btn-comment">Submit</button>
-            </div>
-            <textarea id="userComment" name="userComment" class="form-control border border-4" minlength="3"
-                maxlength="250" required></textarea>
-        </div>
-    </div>
+                <div class="row container">
+                    <div class="col-12 mb-3">
+                        <label for="userComment" class="text-success fs-5">Your Comment .....</label>
+                        <div class="float-end mb-2">
+                            <button href="" class="btn bg-color text-light btn-comment">Submit</button>
+                        </div>
+                        <textarea id="userComment" name="userComment" class="form-control border border-4" minlength="3"
+                            maxlength="250" required></textarea>
+                    </div>
+                </div>
 
-    <hr>
-</form>
+                <hr>
+            </form>
+            {% for comment in comments %}
+                {% if comment.comment_id == post._id %}
+                    <div class="row p-1 bg-light container mb-3">
+                        <div class="col align-items-start container">
+                            <p class="badge rounded-pill bg-dark text-light text-left px-2">{{ comment.submit_by }}</p>
+                            <p>{{ comment.comment}}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
 {% endblock %}

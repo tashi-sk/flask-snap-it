@@ -4,7 +4,7 @@
         <div class="col-md-7 mt-3">
           <img src="{{ article.image }}" alt="article-image" class="img-fluid mx-auto">
           <h4 class="mt-3 fs-5 fw-bold">{{ article.title }}</h4>
-          <a href="{{ url_for('comments') }}" class="btn btn-outline-success mb-3">Comment <i class="far fa-comment-dots px-2"></i></a>
+          <a href="{{ url_for( 'comments', post_id=article._id ) }}" class="btn btn-outline-success mb-3">Comment <i class="far fa-comment-dots px-2"></i></a>
         </div>
         <div class="col-md-5 align-self-center">
           <h4 class="text-color fs-4">About</h4>
