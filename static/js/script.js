@@ -10,4 +10,11 @@ $(document).ready(function () {
     $(this).css('display', 'none');
     $(this).prev().css('display','block')
   })
+  updateYear()
 });
+
+var copyrightYear = document.getElementById('year');
+
+function updateYear(){
+    copyrightYear.innerText = new Date().getFullYear()
+}
