@@ -102,3 +102,23 @@ body {
     background-color: #fff;
     color: rgb(114, 144, 58)!important;
 }
+
+.drop-down {
+    cursor: pointer;
+}
+.cross {
+    display: none;
+    cursor: pointer;
+}
+#commentsEdit {
+    display: none;
+    animation: btn 0.5s ease-in-out;
+}
+@keyframes btn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
