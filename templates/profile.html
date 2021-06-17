@@ -25,7 +25,7 @@
                         <p class="profile-title-text fs-4">{{ article.title }}</p>
                         <p id="summaryText" class="profile-summaryText p-4 text-justify">{{ article.summary }}</p>
                         <div class="text-center mb-3">
-                            <a href="" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="{{ url_for('edit_post', post_id=article._id) }}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a>
                             <a href=""
                                 class="btn btn-danger"><i class="far fa-trash-alt"></i> Delete</a>
                         </div>

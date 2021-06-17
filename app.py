@@ -149,6 +149,40 @@ def upload():
     return render_template("upload.html")
 
 
+@app.route("/edit_post/<post_id>", methods=["GET", "POST"])
+def edit_post(post_id):
+    if request.method == "POST":
+        # to get current date and time
+        now_date = datetime.now().strftime('%d,%b')
+        now_time = datetime.now()
+        current_time = str(now_time.hour)+":"+str(now_time.minute)
+        # converting time to am/pm 
+        if now_time.hour > 12:
+            current_time = str(now_time.strftime('%H:%M'))+"pm"
+        else:
+            current_time = str(now_time.strftime('%H:%M'))+"am"
+
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})
+        # Edit choosen user post 
+        new_post = {
+            "image": request.form.get("image_url"),
+            "title": request.form.get("title"),
+            "summary": request.form.get("summary"),
+            "submit_by": session["user"].lower(),
+            "date": now_date,
+            "time": current_time
+        }
+        # update choosen user post 
+        mongo.db.article.update({"_id": ObjectId(post_id)}, new_post)
+        flash("Post Updated successfully")
+        return redirect(url_for('profile', username=username))
+
+    post = mongo.db.article.find_one({"_id": ObjectId(post_id)})
+    articles = mongo.db.article.find().sort("title", 1)
+    return render_template("edit_post.html", post=post, articles=articles)
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
