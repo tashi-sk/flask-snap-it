@@ -230,12 +230,12 @@ def edit_comment(comment_id):
     post_comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
     comments = mongo.db.comments.find().sort("date", -1)
 
-    for k,v in post_comments.items():
+    for k, v in post_comments.items():
         if k == "comment_id":
             post_id = v
 
     post = mongo.db.article.find_one({"_id": ObjectId(post_id)})
-            
+         
     if request.method == "POST":
         # current date and time
         now_date = datetime.now().strftime('%d-%b')
@@ -254,9 +254,11 @@ def edit_comment(comment_id):
         mongo.db.comments.update_one(
             {"_id": ObjectId(comment_id)}, {"$set": edited_comment})
         flash("Comment Updated successfully")
-        return render_template('comments.html', post=post, comments=comments, articles = articles)
+        return render_template(
+            'comments.html', post=post, comments=comments, articles = articles)
 
-    return render_template("edit_comment.html",post=post, post_comments=post_comments)
+    return render_template(
+        "edit_comment.html", post=post, post_comments=post_comments)
 
 
 @app.route("/delete_comment/<comment_id>")
@@ -272,12 +274,13 @@ def delete_comment(comment_id):
 
     # get the article post from db where user was deleteing comment
     post = mongo.db.article.find_one({"_id": ObjectId(post_id)})
-    # sorting comments for post by date 
+    # sorting comments for post by date
     comments = mongo.db.comments.find().sort("date", -1)
-    # removing user selected comment 
+    # removing user selected comment
     mongo.db.comments.remove({"_id": ObjectId(comment_id)})
     flash("Comment Successfully deleted")
-    return render_template("comments.html", articles=articles, post=post, comments=comments)
+    return render_template(
+        "comments.html", articles=articles, post=post, comments=comments)
 
 
 if __name__ == "__main__":
