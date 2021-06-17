@@ -223,6 +223,42 @@ def comments(post_id):
         'comments.html', articles=articles, post=post, comments=comments)
 
 
+@app.route("/edit_comment/<comment_id>", methods=["GET", "POST"])
+def edit_comment(comment_id):
+
+    articles = mongo.db.article.find()
+    post_comments = mongo.db.comments.find_one({"_id": ObjectId(comment_id)})
+    comments = mongo.db.comments.find().sort("date", -1)
+
+    for k,v in post_comments.items():
+        if k == "comment_id":
+            post_id = v
+
+    post = mongo.db.article.find_one({"_id": ObjectId(post_id)})
+            
+    if request.method == "POST":
+        # current date and time
+        now_date = datetime.now().strftime('%d-%b')
+        now_time = datetime.now()
+        current_time = str(now_time.hour)+":"+str(now_time.minute)
+        if now_time.hour > 12:
+            current_time = str(now_time.strftime('%H:%M'))+"pm"
+        else:
+            current_time = str(now_time.strftime('%H:%M'))+"am"
+        edited_comment = {
+            "comment": request.form.get("userEditComment"),
+            "edit": " (edited)",
+            "date": now_date,
+            "time": current_time
+        }
+        mongo.db.comments.update_one(
+            {"_id": ObjectId(comment_id)}, {"$set": edited_comment})
+        flash("Comment Updated successfully")
+        return render_template('comments.html', post=post, comments=comments, articles = articles)
+
+    return render_template("edit_comment.html",post=post, post_comments=post_comments)
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
