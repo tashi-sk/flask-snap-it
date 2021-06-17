@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="row profile-header">
-    <div class="mb-3 shadow p-4 navbar bg-gradient rounded">
-        <p class="flex-grow-1 text-warning fs-2">Dashboard</p>
-        <a href="#"  class="btn btn-outline-light float-end upload-btn">Upload</a>
-    </div>
-</div>
-<div class="profile-header">
-    <div class="row mt-3">
-        <div class="text-center mb-3">
-            <p class="fs-2 text-color">{{ username.username.capitalize() }}'s Stories</p>
+    <div class="row profile-header">
+        <div class="mb-3 shadow p-4 navbar bg-gradient rounded">
+            <p class="flex-grow-1 text-warning fs-2">Dashboard</p>
+            <a href="{{ url_for('upload') }}"  class="btn btn-outline-light float-end upload-btn">Upload</a>
         </div>
     </div>
-</div>
+    <div class="profile-header">
+        <div class="row mt-3">
+            <div class="text-center mb-3">
+                <p class="fs-2 text-color fw-bold">{{ username.username.capitalize() }}'s Stories</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -75,3 +75,8 @@ body {
     font-size: 150%;
     border-radius: 20%;
 }
+
+/* Upload template */
+.bg-color {
+    background-color: rgb(114, 144, 58);
+}
