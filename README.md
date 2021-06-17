@@ -65,3 +65,9 @@ Note: This project is built for educational purpose. please dont share your pers
     * As a site owner, i want that users are able signup and login without difficulty.
     * As a site owner, i want to be able to maintain the database.
     * As a site owner, i would like to know if any user come across any bug/issue with the website
+
+## Color Scheme
+
+* ### Color Scheme
+    * I have used very basic color scheme for this project. As my purpose was to keep website simple and straight.
+    * i have used the folowing colors in this project.
