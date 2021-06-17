@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+    {% for article in articles %}
+      <div class="row container text-center bg-light shadow mt-3 mx-auto">
+        <div class="col-md-7 mt-3">
+          <img src="{{ article.image }}" alt="article-image" class="img-fluid mx-auto">
+          <h4 class="mt-3 fs-5 fw-bold">{{ article.title }}</h4>
+          <a href="" class="btn btn-outline-success mb-3">Comment <i class="far fa-comment-dots px-2"></i></a>
+        </div>
+        <div class="col-md-5 align-self-center">
+          <h4 class="text-color fs-4">About</h4>
+          <p id="summaryText" class="summary-Text fs-5">{{ article.summary }}</p>
+        <div class="text-center">
+          <p class="text-primary">Submit by: <span class="text-success fw-bold">{{article.submit_by.capitalize()}}</span></p>
+          <p class="fw-bold">Date: {{ article.date }}</p>
+        </div>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock %}

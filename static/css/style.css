@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(204, 223, 170);
+}
+
 .navbar {
     color:rgb(255, 255, 255);
     background-color: rgb(114, 144, 58);
@@ -34,4 +38,13 @@
 
 .upload-btn:hover {
     color: rgb(114, 144, 58);
+}
+
+/* Community template */
+
+.image-community {
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 245px;
+    height: 250px;
 }

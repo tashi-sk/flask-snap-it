@@ -96,6 +96,12 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/community")
+def community():
+    articles = mongo.db.article.find().sort("date", -1)
+    return render_template("community.html", articles=articles)
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
