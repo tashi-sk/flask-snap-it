@@ -76,3 +76,7 @@ Note: This project is built for educational purpose. please dont share your pers
 
 * Some other colors outside of bootstrap 
 ![Color-Pallete](https://github.com/tashi-sk/flask-snap-it/blob/master/color-pallete/color-pallete.png "colors-pallete")
+
+
+### Typography
+   * for Typography i have used Roboto font family style which i have found on [Google Fonts](https://fonts.google.com).
