@@ -72,7 +72,7 @@ Note: This project is built for educational purpose. please dont share your pers
     * I have used very basic color scheme for this project. As my purpose was to keep website simple and straight.
     * i have used the folowing colors in this project.
 * Bootstrap Color scheme is used on some elements 
-![Bootstrap-colors](https://github.com/tashi-sk/flask-snap-it/blob/master/color-pallete/bootstrap-color.png "Bootstrap-colors")
+      ![Bootstrap-colors](https://github.com/tashi-sk/flask-snap-it/blob/master/color-pallete/bootstrap-color.png "Bootstrap-colors")
 
 * Some other colors outside of bootstrap 
 ![Color-Pallete](https://github.com/tashi-sk/flask-snap-it/blob/master/color-pallete/color-pallete.png "colors-pallete")
