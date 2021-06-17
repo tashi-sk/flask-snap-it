@@ -125,3 +125,19 @@ body {
         transform: scale(1);
     }
 }
+
+/* base template image */
+
+.landing-image-div {
+    width: 65%;
+    height: 70vh;
+    background: url("../images/share-ur-story.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -1% 10%;
+}
+
+.index-main-div {
+    max-width: 85%;
+    margin:0;
+}
