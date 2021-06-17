@@ -16,4 +16,12 @@
         </div>
       </div>
     {% endfor %}
+    <div class="container">
+        {% if articles.count() > 0 %}
+            {{ pagination.links }}
+            <div class="text-center">
+            {{ pagination.info }}
+            </div>
+        {% endif %}
+    </div>
 {% endblock %}

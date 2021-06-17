@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask_paginate import Pagination, get_page_args
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -99,7 +100,22 @@ def logout():
 @app.route("/community")
 def community():
     articles = mongo.db.article.find().sort("date", -1)
-    return render_template("community.html", articles=articles)
+    # https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+    # https://stackoverflow.com/questions/27992413/how-do-i-calculate-the-offsets-for-pagination/27992616
+    # pylint: disable=unbalanced-tuple-unpacking
+    page, per_page, offset = get_page_args(
+        page_parameter='page', per_page_parameter='per_page',
+        offset_parameter='offset')
+    per_page = 5
+    offset = (page - 1) * per_page
+    total = mongo.db.article.find().count()
+    article_paginated = articles[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page,
+                            total=total)
+    return render_template(
+        "community.html", articles=article_paginated, page=page,
+                           per_page=per_page,
+                           pagination=pagination)
 
 
 if __name__ == "__main__":
