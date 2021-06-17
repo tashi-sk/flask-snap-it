@@ -8,6 +8,10 @@
 body {
     background-color: rgb(204, 223, 170);
 }
+
+.text-justify {
+    text-align: justify;
+}
 /* navbar styling */
 .navbar {
     color:rgb(255, 255, 255);
