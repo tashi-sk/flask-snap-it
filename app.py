@@ -191,6 +191,11 @@ def delete_post(post_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+@app.route("/comments", methods=["GET", "POST"])
+def comments():
+    return render_template('comments.html')
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),

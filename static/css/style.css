@@ -96,3 +96,9 @@ body {
 .bg-color {
     background-color: rgb(114, 144, 58);
 }
+
+/* Comment template */
+.btn-comment:hover {
+    background-color: #fff;
+    color: rgb(114, 144, 58)!important;
+}
