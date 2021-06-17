@@ -141,3 +141,40 @@ body {
     max-width: 85%;
     margin:0;
 }
+
+.btn-signup, .btn-login {
+    background-color: rgb(114, 144, 58);
+    color: #fff;
+}
+
+.btn-signup:hover {
+    color: rgb(114, 144, 58);
+    background-color: #fff;
+}
+
+.btn-login:hover {
+    color: rgb(114, 144, 58);
+    background-color: #fff;
+}
+/* media queries for base template */
+
+@media screen and (min-width: 766px){
+    .index-heading {
+        top: 10%!important;
+        left: 50%;
+    }
+    .index-main-div {
+        position: relative;
+        /* right: 5%; */
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .index-heading {
+        top: 10%!important;
+        left: 50%;
+    }
+    .index-main-div {
+        left: 50px;
+    }
+}
