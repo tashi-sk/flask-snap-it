@@ -18,10 +18,10 @@
             {% if article.submit_by == session["user"] %}
                 <div class="row mt-3">
                     <div class="text-left">
-                        <p><span class="fw-bold">{{ article.date }}</span> {{ article.time }}</p>
+                        <p class="fw-bold text-center text-dark">Uploaded: <span class="text-color">{{ article.date }} {{ article.time }}</span></p>
                     </div>
                     <div class="col text-center">
-                        <img class="img-profile shadow" src="{{ article.image }}" alt="article-image">
+                        <img class="img-fluid shadow" src="{{ article.image }}" alt="article-image">
                         <p class="profile-title-text fs-4">{{ article.title }}</p>
                         <p id="summaryText" class="profile-summaryText p-4 text-justify">{{ article.summary }}</p>
                         <div class="text-center mb-3">
