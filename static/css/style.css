@@ -40,6 +40,15 @@ body {
     color: rgb(114, 144, 58);
 }
 
+.img-profile {
+    width: 40vw;
+    height: 50vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* max-width: 350px;
+    height: 350px; */
+}
+
 /* Community template */
 
 .image-community {
