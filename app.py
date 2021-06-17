@@ -183,6 +183,14 @@ def edit_post(post_id):
     return render_template("edit_post.html", post=post, articles=articles)
 
 
+@app.route("/delete_post/<post_id>")
+def delete_post(post_id):
+    # removing article post of user 
+    mongo.db.article.remove({"_id": ObjectId(post_id)})
+    flash("Post Successfully deleted")
+    return redirect(url_for("profile", username=session["user"]))
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),

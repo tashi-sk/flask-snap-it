@@ -49,6 +49,13 @@ body {
     height: 350px; */
 }
 
+.btn-back:hover {
+    color: rgb(114, 144, 58);
+}
+.btn-del:hover {
+    color: rgb(168, 41, 41);
+}
+
 /* Community template */
 
 .image-community {
