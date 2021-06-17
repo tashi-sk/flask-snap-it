@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
     {% for article in articles %}
-        {% if article.title == post.title %}
+        {% if article._id == post._id %}
             <form action="{{ url_for('comments', post_id=article._id) }}" method="post">
                 <div class="row mt-3 profile-header">
                     <div class="col-sm text-center">
