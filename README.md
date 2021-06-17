@@ -18,7 +18,7 @@ Note: This project is built for educational purpose. please dont share your pers
 * [User Experience Design](#User-Experience-Design)
     * [User Stories](#User-Stories)
     * [Color Scheme](#Color-Scheme)
-    * [Typography](#)
+    * [Typography](#Typography)
     * [Logo](#)
 * [Website Structure](#)
     * [Wireframes](#)
