@@ -7,16 +7,20 @@
                 <div class="">
                     <!-- username -->
                     <div class="mb-3 row">
-                        <label for="username" class="col-sm-1 offset-sm-3 col-form-label"><i class="fas fa-user text-light fs-1"></i></label>
+                        <label for="username" class="col-sm-1 offset-sm-3 col-form-label"><i
+                                class="fas fa-user text-light fs-1"></i></label>
                         <div class="col-sm-4 ">
-                            <input id="username" name="username" type="text" placeholder="Username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
+                            <input id="username" name="username" type="text" placeholder="Username" minlength="5"
+                                maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
                         </div>
                     </div>
                     <!-- password -->
                     <div class="mb-3 row">
-                        <label for="inputPassword" class="col-sm-1 offset-sm-3 col-form-label"><i class="fas fa-user-lock text-light fs-1"></i></label>
+                        <label for="inputPassword" class="col-sm-1 offset-sm-3 col-form-label"><i
+                                class="fas fa-user-lock text-light fs-1"></i></label>
                         <div class="col-sm-4">
-                            <input id="password" name="password" type="password" placeholder="Password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
+                            <input id="password" name="password" type="password" placeholder="Password" minlength="5"
+                                maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" required>
                         </div>
                     </div>
                     <!-- Log in -->
@@ -32,13 +36,14 @@
         </div>
     </div>
     <div class="row">
-    <div class="col-11">
-        <p class="text-center text-color fw-bold">
-            Not Registered?
-            <a href="{{ url_for('register') }}" class="fw-normal p-2 btn btn-signup">Register</a>
-        </p>
+        <div class="col-11">
+            <p class="text-center text-color fw-bold">
+                Not Registered?
+                <a href="{{ url_for('register') }}" class="fw-normal p-2 btn btn-signup">Register</a>
+            </p>
+        </div>
     </div>
-    </div>
+    
 {% endblock %}
 {% block image %}
 {% endblock %}
