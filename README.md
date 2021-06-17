@@ -85,4 +85,10 @@ Note: This project is built for educational purpose. please dont share your pers
 ### WireFrames
    
    * [Home Page](wireframes/home_page.png)
+   * [Register Page](wireframes/register_page.png)
+   * [Log in Page](wireframes/Login_page.png)
+   * [Community Page](wireframes/community_page.png)
+   * [Comments Page](wireframes/comment_page.png)
+   * [Upload/Edit](wireframes/comment_page.png)
+
 
