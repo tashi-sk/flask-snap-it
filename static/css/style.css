@@ -1,7 +1,14 @@
+* {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(204, 223, 170);
 }
-
+/* navbar styling */
 .navbar {
     color:rgb(255, 255, 255);
     background-color: rgb(114, 144, 58);
