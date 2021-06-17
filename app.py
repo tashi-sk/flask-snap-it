@@ -6,6 +6,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from flask_paginate import Pagination, get_page_args
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -101,8 +102,6 @@ def logout():
 def community():
     articles = mongo.db.article.find().sort("date", -1)
     # https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
-    # https://stackoverflow.com/questions/27992413/how-do-i-calculate-the-offsets-for-pagination/27992616
-    # pylint: disable=unbalanced-tuple-unpacking
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page',
         offset_parameter='offset')
@@ -120,6 +119,31 @@ def community():
 
 @app.route("/upload", methods=["GET", "POST"])
 def upload():
+    if request.method == "POST":
+        # to get current date and time
+        now_date = datetime.now().strftime('%d,%b')
+        now_time = datetime.now()
+        current_time = str(now_time.hour)+":"+str(now_time.minute)
+        # converting time to am/pm 
+        if now_time.hour > 12:
+            current_time = str(now_time.strftime('%H:%M'))+"pm"
+        else:
+            current_time = str(now_time.strftime('%H:%M'))+"am"
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})
+        # Inserting Post to db
+        if username:
+            new_post = {
+                "image": request.form.get("image_url"),
+                "title": request.form.get("title"),
+                "summary": request.form.get("summary"),
+                "submit_by": session["user"].lower(),
+                "date": now_date,
+                "time": current_time
+            }
+            mongo.db.article.insert_one(new_post)
+            flash("Post submitted successfully")
+            return redirect(url_for('profile', username=username))
     return render_template("upload.html")
 
 
