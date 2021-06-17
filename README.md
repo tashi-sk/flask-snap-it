@@ -19,7 +19,6 @@ Note: This project is built for educational purpose. please dont share your pers
     * [User Stories](#User-Stories)
     * [Color Scheme](#Color-Scheme)
     * [Typography](#Typography)
-    * [Logo](#)
 * [Website Structure](#)
     * [Wireframes](#)
     * [Mockups](#)
