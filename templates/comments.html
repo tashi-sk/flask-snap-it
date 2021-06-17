@@ -4,11 +4,12 @@
             <form action="{{ url_for('comments', post_id=article._id) }}" method="post">
                 <div class="row mt-3 profile-header">
                     <div class="col-sm text-center">
+                        <p class="fw-bold text-color">Date: {{ post.date }}</p>
                         <img class="img-profile" src="{{ article.image }}" alt="article-image" class="shadow">
                         <h4 class="p-2">{{ post.title }}</h5>
                             <div class="row mt-3">
                                 <div class="col-sm-8 mx-auto text-justify">
-                                    <p class=" p-2">{{ post.summary }}</p>
+                                    <p class="bg-light p-2 fw-bold">{{ post.summary }}</p>
                                     <p class="badge rounded-pill bg-warning text-dark">Submit by: <span
                                             class="text-success">{{ post.submit_by.capitalize() }}</span></p>
                                 </div>
@@ -46,7 +47,7 @@
                             </p>
                         {% endif %}
                         
-                        <p class="float-end px-2">{{ comment.time }} <span class="text-danger">{{ comment.date }}</span>
+                        <p class="float-end px-2 text-dark">{{ comment.time }} <span class="text-danger">{{ comment.date }}</span>
                         {% if comment.submit_by == session["user"] %}
                             <i class="float-start fas fa-caret-down px-3 drop-down" id=""></i><i class="float-end px-2 fas fa-times cross" id=""></i></p>
                         {% endif %}
