@@ -167,6 +167,52 @@ body {
     color: rgb(114, 144, 58);
     background-color: #fff;
 }
+
+/*footer*/
+.footer-align{
+    min-height: 82vh;
+}
+
+footer { 
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%; 
+    background-color:rgb(114, 144, 58); 
+    max-height:250px; 
+    padding:10px 0px 10px 0px;
+}
+footer p {
+    font-size:14px; 
+    color:#CCC; 
+    padding-bottom:0px; 
+    margin-bottom:8px;
+}
+
+.social_footer_ul { 
+    display:table;
+    margin:15px auto 0 auto; 
+    list-style-type:none;  
+    padding-left: 0;
+}
+.social_footer_ul li { 
+    padding:20px;
+    float:left; 
+}
+.social_footer_ul li a { 
+    color:#CCC; 
+    border:2px solid #CCC; 
+    padding:6px;
+    border-radius:50%;
+}
+.social_footer_ul li i {  
+    width:25px; 
+    height:16px; 
+    text-align:center;
+}
+
+
 /* media queries for base template */
 
 @media screen and (min-width: 766px){
