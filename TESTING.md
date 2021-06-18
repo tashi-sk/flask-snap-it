@@ -14,7 +14,7 @@ The website's HTML passed the W3C HTML Validation checker:
 
 **Homepage: Pass**
 
-![home-page html5 validation](https://github.com/tashi-sk/flask-snap-it/wireframes/home-testing-warning.png "Snap-it html validation")
+![home-page html5 validation](https://github.com/tashi-sk/flask-snap-it/blob/master/wireframes/home-testing-warning.png "Snap-it html validation")
 
 **Login Page: was Fail first**
 
