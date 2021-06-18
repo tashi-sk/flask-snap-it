@@ -39,7 +39,7 @@
                             {% endif %}
                         </div>
                         <div class="col-sm-4 offset-sm-2 container">
-                        {% if comment.submit_by == session["user"] %}
+                        {% if comment.submit_by == session["user"] or session['user'] == "admin" %}
                             <p class="float-end" id="commentsEdit">
                                 <a href="{{ url_for('edit_comment', comment_id=comment._id) }}" class="btn btn-outline-warning my-1"><i class="fas fa-edit"></i></a>
                                 <a href="{{ url_for('delete_comment', comment_id=comment._id) }}"
@@ -48,7 +48,7 @@
                         {% endif %}
                         
                         <p class="float-end px-2 text-dark">{{ comment.time }} <span class="text-danger">{{ comment.date }}</span>
-                        {% if comment.submit_by == session["user"] %}
+                        {% if comment.submit_by == session["user"] or session['user'] == "admin" %}
                             <i class="float-start fas fa-caret-down px-3 drop-down" id=""></i><i class="float-end px-2 fas fa-times cross" id=""></i></p>
                         {% endif %}
                         </div>
