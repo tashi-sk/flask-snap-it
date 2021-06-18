@@ -37,3 +37,10 @@ The website's HTML passed the W3C HTML Validation checker:
   * test was passed with one warning after fix
   
 ![login-page html5 test warning](https://github.com/tashi-sk/flask-snap-it/blob/master/wireframes/register-testing-warning.png "Snap-it html test pass")
+
+
+### Python PEP8 Compliant
+
+The website's Python code was checked for [PEP8 compliance](http://pep8online.com/) and returned no errors:
+
+![python pep8 check](https://github.com/tashi-sk/flask-snap-it/blob/master/wireframes/pep8-testing.png "Snap-itpep8 check")
