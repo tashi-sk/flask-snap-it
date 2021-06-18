@@ -22,10 +22,10 @@ Note: This project is built for educational purpose. please dont share your pers
 * [Website Structure](#Website-Structure)
     * [Wireframes](#Wireframes)
     * [Database Structure](#Database)
-* [Features](#features)
+* [Features](#Features)
     * [Existing Features](#Existing-Features)
     * [Features to be Implemented](#Features-to-be-Implemented)
-* [Technologies Used](#technologies-used)
+* [Technologies Used](#technologies)
     * [Languages](#Languages)
     * [Libraries and Frameworks](#Libraries-and-Frameworks)
     * [Tools](#Tools)
@@ -96,3 +96,40 @@ Note: This project is built for educational purpose. please dont share your pers
    * [Database Structure](wireframes/mongodb-structure.png). MongoDb is used to manage database for this site. I have made database structure by using [Lucid Chart](https://www.lucidchart.com)
       
    * [Site Map](wireframes/site-db-structure.png). I have used [Lucid Chart](https://www.lucidchart.com) to create this site map.
+
+
+## Features
+
+### Existing Features
+
+   * Site Displays clean navigation as user enters. being responsive on all screens (Desktop to Mobile phone).
+   * Users can Upload thier post easily through the forms input.
+   * users can edit thier post if they want to update any field again.
+   * users can delete thier post. a modal se linked to confirm deleting of post in case user clicked by no intention or change his choice.
+   * user can view community post submited by other users
+   * user can comment if wants to, on any post.
+   * user can delete his comment if want to.
+   * footer is provided on every page. if user wants to contact site owner or access social media.
+
+### Features to be Implemented
+   * i would like add in future an option on community page that user can search post by title or date.
+   * i would like to add option for password recovery in future
+   * i would like to implement comments enable/disable option to give to the user on his post.
+   * i would like to give user choice to upload post in available categories or create one.
+   * i would like to give user ability to upload images it self instead of URL option.
+
+
+## Technologies
+
+### Languages 
+* [HTML](https://en.wikipedia.org/wiki/HTML) for front end.
+* [CSS](https://en.wikipedia.org/wiki/CSS) for styling.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used to create interactive elements on the website
+* [Python](https://www.python.org/) for the backend of the website.
+
+### Libraries and Frameworks
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) micro web framework is used in building this site.
+* [Bootstrap](https://getbootstrap.com/) library is used for style and responsiveness 
+* [JQuery](https://jquery.com/) is used to control the interactive button elements.
+* [Google Fonts](https://fonts.google.com/) is used on this website.
+* [Font Awesome](https://fontawesome.com/) is used for icons across the website
