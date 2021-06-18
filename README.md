@@ -95,4 +95,4 @@ Note: This project is built for educational purpose. please dont share your pers
 * MongoDb
    * [Database Structure](wireframes/mongodb-structure.png). MongoDb is used to manage database for this site. I have made database structure by using [Lucid Chart](https://www.lucidchart.com)
       
-    
+   * [Site Map](wireframes/site-db-structure.png). I have used [Lucid Chart](https://www.lucidchart.com) to create this site map.
