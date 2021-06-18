@@ -1,5 +1,7 @@
 # Snap-It
 
+![Snap-It](static/images/am-i-responsive.png "Snap-It")
+
 Snap-it is a website for users to upload image url's and share the story relate to that.
 Users can register and comment on post. 
 
