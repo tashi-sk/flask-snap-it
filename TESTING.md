@@ -44,3 +44,19 @@ The website's HTML passed the W3C HTML Validation checker:
 The website's Python code was checked for [PEP8 compliance](http://pep8online.com/) and returned no errors:
 
 ![python pep8 check](https://github.com/tashi-sk/flask-snap-it/blob/master/wireframes/pep8-testing.png "Snap-itpep8 check")
+
+
+### JSHint JavaScript Test
+
+The website's JavaScript was tested for errors using [JSHint](https://jshint.com/).
+
+**Issues and Fixes**
+
+JSHint returned 6 warnings - all those warnings were because of missing semicolon.
+
+
+### Web Accessibility 
+
+The website's homepage was tested to ensure it was accessible to people with disabilities using the [Web Accessibility](https://www.webaccessibility.com/) checker.
+
+![web accessibility test](https://github.com/tashi-sk/flask-snap-it/blob/master/wireframes/web-accessibility-testing.png "Snap-it web accessibility test")
