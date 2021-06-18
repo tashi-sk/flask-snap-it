@@ -21,8 +21,7 @@ Note: This project is built for educational purpose. please dont share your pers
     * [Typography](#Typography)
 * [Website Structure](#Website-Structure)
     * [Wireframes](#Wireframes)
-    * [Mockups](#)
-    * [Database Structure](#)
+    * [Database Structure](#Database)
 * [Features](#features)
     * [Existing Features](#Existing-Features)
     * [Features to be Implemented](#Features-to-be-Implemented)
@@ -89,6 +88,11 @@ Note: This project is built for educational purpose. please dont share your pers
    * [Log in Page](wireframes/Login_page.png)
    * [Community Page](wireframes/community_page.png)
    * [Comments Page](wireframes/comment_page.png)
-   * [Upload/Edit](wireframes/comment_page.png)
+   * [Upload/Edit Page](wireframes/comment_page.png)
 
+### Database
 
+* MongoDb
+   * MongoDb is used to manage database for this site. I have made database structure by using [Lucid Chart](https://www.lucidchart.com)
+    [Database Structure](wireframes/mongodb-structure.png)
+    
