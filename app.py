@@ -114,9 +114,8 @@ def community():
     pagination = Pagination(page=page, per_page=per_page,
                             total=total)
     return render_template(
-        "community.html", articles=article_paginated, page=page,
-                           per_page=per_page,
-                           pagination=pagination)
+        "community.html", articles=article_paginated,
+        page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route("/upload", methods=["GET", "POST"])
@@ -126,7 +125,7 @@ def upload():
         now_date = datetime.now().strftime('%d,%b')
         now_time = datetime.now()
         current_time = str(now_time.hour)+":"+str(now_time.minute)
-        # converting time to am/pm 
+        # converting time to am/pm
         if now_time.hour > 12:
             current_time = str(now_time.strftime('%H:%M'))+"pm"
         else:
@@ -156,7 +155,7 @@ def edit_post(post_id):
         now_date = datetime.now().strftime('%d,%b')
         now_time = datetime.now()
         current_time = str(now_time.hour)+":"+str(now_time.minute)
-        # converting time to am/pm 
+        # converting time to am/pm
         if now_time.hour > 12:
             current_time = str(now_time.strftime('%H:%M'))+"pm"
         else:
@@ -164,7 +163,7 @@ def edit_post(post_id):
 
         username = mongo.db.users.find_one(
             {"username": session["user"]})
-        # Edit choosen user post 
+        # Edit choosen user post
         new_post = {
             "image": request.form.get("image_url"),
             "title": request.form.get("title"),
@@ -173,7 +172,7 @@ def edit_post(post_id):
             "date": now_date,
             "time": current_time
         }
-        # update choosen user post 
+        # update choosen user post
         mongo.db.article.update({"_id": ObjectId(post_id)}, new_post)
         flash("Post Updated successfully")
         return redirect(url_for('profile', username=username))
@@ -185,7 +184,7 @@ def edit_post(post_id):
 
 @app.route("/delete_post/<post_id>")
 def delete_post(post_id):
-    # removing article post of user 
+    # removing article post of user
     mongo.db.article.remove({"_id": ObjectId(post_id)})
     flash("Post Successfully deleted")
     return redirect(url_for("profile", username=session["user"]))
@@ -235,7 +234,7 @@ def edit_comment(comment_id):
             post_id = v
 
     post = mongo.db.article.find_one({"_id": ObjectId(post_id)})
-         
+
     if request.method == "POST":
         # current date and time
         now_date = datetime.now().strftime('%d-%b')
@@ -255,7 +254,7 @@ def edit_comment(comment_id):
             {"_id": ObjectId(comment_id)}, {"$set": edited_comment})
         flash("Comment Updated successfully")
         return render_template(
-            'comments.html', post=post, comments=comments, articles = articles)
+            'comments.html', post=post, comments=comments, articles=articles)
 
     return render_template(
         "edit_comment.html", post=post, post_comments=post_comments)
@@ -268,7 +267,7 @@ def delete_comment(comment_id):
     # get all articles post from db
     articles = mongo.db.article.find()
     # getting comment_id from comments db to give as post_id on comments.html
-    for k,v in post_comments.items():
+    for k, v in post_comments.items():
         if k == "comment_id":
             post_id = v
 
