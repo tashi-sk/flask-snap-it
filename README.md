@@ -168,7 +168,7 @@ This project was created on GitHub using the following steps:
 ### Heroku Deployment
 
 **Setup Files**
-* Tell Heroku which applications and dependencies are required to run our app by setting up a requirements.txt and Procfile: 
+   - Tell Heroku which applications and dependencies are required to run our app by setting up a requirements.txt and Procfile: 
 
 > pip3 freeze --local > requirements.txt
 
