@@ -153,7 +153,7 @@ Note: This project is built for educational purpose. please dont share your pers
 
 
 ## Testing
-   * The Testing Result can be found here. [testing.md](Testing.md)
+   * The Testing Result can be found here. [testing.md](TESTING.md)
 
 ## Deployment
 
