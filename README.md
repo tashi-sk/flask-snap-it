@@ -111,6 +111,7 @@ Note: This project is built for educational purpose. please dont share your pers
    * user can view community post submited by other users.
    * user can comment if wants to, on any post.
    * user can delete his comment if want to.
+   * Admin has full control on post and comments. 
    * footer is provided on every page. if user wants to contact site owner or access social media.
 
 ### Features to be Implemented
@@ -216,3 +217,12 @@ The following steps are required to run this locally:
 [Back to top](#Table-of-Contents)
 
 ## Credits
+   * Special Thanks to All mentors for making it easy to learn this project.
+   * Thanks to slack community where i find all my answers to my queries.
+   * Pagination functionality is taken from [GitHub User's Repository](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) and edited according to need.
+
+## Acknowledgement
+
+   * The images used on this website are taken from [Google](https://www.google.com) search including home page image.
+   * All the text content of post uploaded is taken fron [Wikipedia](https:www.wikipedia.org).
+
