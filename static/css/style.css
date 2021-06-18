@@ -59,8 +59,6 @@ body {
     height: 50vh;
     -o-object-fit: cover;
     object-fit: cover;
-    /* max-width: 350px;
-    height: 350px; */
 }
 
 .btn-back:hover {
@@ -93,7 +91,6 @@ body {
 .pagination-page-info {
     padding: .6em;
     padding-left: 0;
-    /* width: 40em; */
     margin: .5em;
     margin-left: 0;
     font-size: 12px;
@@ -169,6 +166,10 @@ body {
 .btn-login:hover {
     color: rgb(114, 144, 58);
     background-color: #fff;
+}
+
+.home-page-buttons>a {
+    padding:5px;
 }
 
 /*footer*/

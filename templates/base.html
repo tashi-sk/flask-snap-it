@@ -106,8 +106,8 @@
             </div>
             
         {% else %}
-            <h3 class="text-center text-color mt-3 p-5">{{ session["user"].capitalize() }} is Logged in</h3>
-            <div class="text-center">
+            <h4 class="text-center text-color mt-3 p-4">{{ session["user"].capitalize() }} is Logged in</h4>
+            <div class="text-center home-page-buttons">
                 <a href="{{ url_for('community', username=session['user']) }}" class="btn btn-signup mx-2 btn-lg">Comminuty Page</a>
                 <a class="btn btn-signup mx-2 btn-lg" href="{{ url_for('logout') }}">Log Out</a>
             </div>
